@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3de15e64-a25f-4634-835e-bc694391c292" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/comps/Toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/comps/Toolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/CreatePostPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/CreatePostPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/LoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/pages/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/pages/RegistrationPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +46,7 @@
       <updated>1643109022153</updated>
       <workItem from="1643109023427" duration="20990000" />
       <workItem from="1643187507252" duration="60156000" />
-      <workItem from="1643539355184" duration="4993000" />
+      <workItem from="1643539355184" duration="5603000" />
     </task>
     <servers />
   </component>

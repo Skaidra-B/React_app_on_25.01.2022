@@ -1,31 +1,56 @@
-import React, {useContext} from 'react';
-import mainContext from "../context/mainContext";
+
 import {Link} from "react-router-dom";
 
-const Toolbar = () => {
+const Toolbar = ({user, page, setUser, posts}) => {
 
-    const {getPage} = useContext(mainContext)
+    const result = () => {
+        const myPosts = posts.filter(x => x.username === user.username)
+
+        let likesOnPosts = 0
+        let comments = 0
+
+        myPosts.map(x => {
+            likesOnPosts += x.likes.length
+            comments += x.comments.length
+        })
+
+        return {
+            postsAmount: myPosts.length,
+            likesAmount: likesOnPosts,
+            commentsAmount: comments
+        }
+    }
 
     return (
+        <div className="toolbar d-flex space-btw">
 
-            <div className="toolbar d-flex ">
+            {!user && <div>
+                {page !== 'register' && <Link to="/register">Register</Link>}
+                {page !== 'login' &&  <Link to="/login">Login</Link>}
+            </div>}
 
+            {user && <div className="d-flex">
+                {page !== 'main' && <Link to="/main">Main</Link>}
+                {page !== 'create' && <Link to="/create">Create</Link>}
+            </div>}
+
+
+            {user &&
                 <div className="d-flex">
-                    <div>
-                        {(getPage !== "login" && getPage !== "main" && getPage !== "createPost" ) && <Link className="style" to="/login"><h2>Login</h2></Link>}
+                    <div className="mr20">
+                        <h2>{user.username}</h2>
                     </div>
-                    <div>
-                        {(getPage !== "register" && getPage !== "main" && getPage !== "createPost") && <Link className="style" to="/register"><h2>Register</h2></Link> }
-                    </div>
-                    <div>
-                        {(getPage !== "main" && getPage !== "login" && getPage !== "register" && getPage !== "/") && <Link className="style" to="/main"><h2>Main Page</h2></Link> }
-                    </div>
-                    <div>
-                        {(getPage !== "createPost" && getPage !== "login" && getPage !== "register" && getPage !== "/") && <Link className="style" to="/createPost"><h2>Create Post</h2></Link> }
-                    </div>
-                </div>
-            </div>
 
+                    <div className="mr20">Posts: {result().postsAmount}</div>
+                    <div className="mr20">Likes: {result().likesAmount}</div>
+                    <div className="mr20">Comments: {result().commentsAmount}</div>
+
+                </div>}
+
+            {user && <button onClick={() => setUser(null)}>Logout</button>}
+
+
+        </div>
     );
 };
 

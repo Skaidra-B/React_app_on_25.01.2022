@@ -1,38 +1,15 @@
-import React, {useContext, useEffect, useRef} from 'react';
-import mainContext from "../context/mainContext";
-import {useNavigate} from "react-router-dom";
+import React, {useEffect} from 'react';
+import CreatePost from "../comps/CreatePost";
 
-const CreatePostPage = () => {
-
-    const nav = useNavigate()
-
-    const {setPage, getPost, setPost} = useContext(mainContext)
-
-    const title = useRef()
-    const article = useRef()
-
+const CreatePostPage = ({setPage}) => {
 
     useEffect(() => {
-        setPage("createPost")
+        setPage('create')
     }, [])
 
-    function createPost() {
-        const post = {
-            title: title.current.value,
-            article: article.current.value
-        }
-        setPost([...getPost, post])
-        title.current.value = ""
-        article.current.value = ""
-        nav("/main")
-
-    }
-
     return (
-        <div className="d-flex column j-center">
-            <input ref={title} type="text" placeholder="title"/>
-            <input ref={article} type="text" placeholder="article"/>
-            <button onClick={createPost}>Create Post</button>
+        <div className="d-flex j-center">
+            <CreatePost/>
         </div>
     );
 };

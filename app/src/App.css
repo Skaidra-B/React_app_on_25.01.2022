@@ -11,7 +11,7 @@
 }
 .card {
   background-color: coral;
-  margin: 2px;
+  margin: 5px;
 }
 .column {
   flex-direction: column;
@@ -50,3 +50,116 @@ img {
   background-color: darkgoldenrod;
   height: 100vh;
 }
+.space-btw {
+  justify-content: space-between;
+}
+.logOut {
+  cursor: pointer;
+}
+button {
+  width: 100px;
+  margin: 10px;
+}
+.comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.commentInput {
+  height: 100px;
+  width: 200px;
+  margin: 5px;
+}
+
+.grow1 {
+  flex:1;
+}
+.grow3 {
+  flex:3;
+}
+.comment {
+  border: 1px solid;
+  width: 200px;
+  height: 100px;
+}
+
+.border {
+  border: 2px solid gray;
+}
+
+.container {
+  height: 100%;
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.space-btw {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.s-around {
+  justify-content: space-around;
+}
+
+.grow1 {
+  flex: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.box {
+  height: 300px;
+  width: 300px;
+}
+
+.toolbar {
+  padding: 20px;
+}
+
+.toolbar a {
+  margin-right: 20px;
+}
+
+.form {
+  width: 300px;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid;
+  margin: 10px;
+}
+
+
+

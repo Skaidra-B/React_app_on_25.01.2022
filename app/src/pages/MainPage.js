@@ -1,24 +1,15 @@
-import React, {useContext, useEffect} from 'react';
-import mainContext from "../context/mainContext";
+import React, {useEffect} from 'react';
+import PostView from "../comps/PostView";
 
-const MainPage = () => {
-
-    const {setPage, getPost, getLoggedUser} = useContext(mainContext)
+const MainPage = ({setPage, posts}) => {
 
     useEffect(() => {
-        setPage("main")
+        setPage('main')
     }, [])
 
     return (
         <div className="d-flex wrap">
-            <div>
-                {getPost.map((x, i) =>
-                    <div className="card" key={i}>
-                        <h3>{x.title}</h3>
-                        <h3>{x.article}</h3>
-                        <h3>Created by: {getLoggedUser.userName}</h3>
-                    </div>)}
-            </div>
+            {posts.map((x,i) => <PostView index={i} post={x} key={i}/>)}
         </div>
     );
 };
